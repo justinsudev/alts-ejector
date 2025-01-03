@@ -23,6 +23,7 @@ The **Alts Eliminator Bot** is a customizable Discord bot designed to help serve
 1. Clone this repository to your local machine:
 ```bash
 git clone <repository_url>
+```
 
 Navigate to the project directory:
 
