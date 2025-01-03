@@ -1,0 +1,91 @@
+const discord = require('discord.js')
+const db = require('quick.db')
+const c = "`"
+const Canvas = require('canvas')
+module.exports = {
+name: "toggle",
+  category: "info",
+  //aliases: ["setlogs"],
+  description: "Get anime information",
+  usage: "anime <anime_name>",
+  run: async (client, message, args) => {
+    
+    	const canvas = Canvas.createCanvas(700, 250);
+	const ctx = canvas.getContext('2d');
+	const background = await Canvas.loadImage('https://wallpapercave.com/wp/wp7258755.jpg');
+	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+	ctx.strokeStyle = '#ff6d08';
+	ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+	// 🎨 Creates canvas font settings and text style.
+	ctx.font = '50px arial';
+	ctx.fillStyle = 'blue';
+	ctx.fillText(`Alts Eliminator On`, canvas.width / 2, canvas.height / 2);
+	//ctx.font = applyText(canvas, `${member.user}!`);
+	ctx.fillStyle = '#ffffff';
+	//ctx.fillText('We wish you a positive experience!', canvas.width / 9.5, canvas.height / 1.12);
+
+	// 🎨 Adds a canvas image using guild member's avatar with pathing.
+	ctx.beginPath();
+	ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
+  ctx.lineWidh = 1;
+    ctx.strokeStyle = '#ffffff'
+  ctx.stroke();
+	ctx.closePath();
+	ctx.clip();
+	const avatar = await Canvas.loadImage(client.user.displayAvatarURL({ format: 'jpg' }));
+	ctx.drawImage(avatar, 25, 25, 200, 200);
+
+	// 🎨 Creates a new Discord message attachment using canvas.
+	const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'image-lol.png');
+
+let default_prefix = '!';
+    let prefix = db.get(`prefix_${message.guild.id}`)
+    if (prefix === null) prefix = default_prefix;
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`Missing Permission **ADMINISTRATOR**`)
+    if(!message.guild.me.hasPermission("ADMINISTRATOR")) return message.channel.send("I need administrator permissions before you can use toggle.")
+ let status = db.get(`status_${message.guild.id}`)
+ let action = db.get(`action_${message.guild.id}`)
+ let days = db.get(`numDays_${message.guild.id}`)
+ 
+    
+ 
+ if (status === null) {
+   db.set(`status_${message.guild.id}`, true)
+  let embed = new discord.MessageEmbed()
+  .setAuthor("Success", "https://media.discordapp.net/attachments/760163394677506048/764202511460466698/717382820363763852_1.png")
+  .setDescription(`**The alts kicker has been toggled to:** ${c}on${c}` + `\n\n**This action was configured by <@${message.author.id}> - ${message.author.id} - ${message.author.tag}**` + "\n\n" + `**<a:info:781586085188862002> Few things to keep in mind: Bots role must be higher than members role, and the bot must has ADMINISTRATOR permissions in the guild in order to run properly.\n\n<a:info:781586085188862002> Please also make sure you have or will have configured these commands below:**` + "\n\n" + "**" + "```js" + "\n"+ `${prefix}setDays <value>\n${prefix}setAction <KICK || BAN>\n${prefix}setLogs <CHANNEL>` + "```" + "**")
+ .setFooter(client.user.username, client.user.displayAvatarURL())
+                .setTimestamp()
+                .setColor(0x0099ff)
+  
+  message.channel.send({ files: [attachment], embed: embed })
+  }
+ 
+if(status === false) {
+    db.set(`status_${message.guild.id}`, true)
+      let embed1 = new discord.MessageEmbed()
+  .setAuthor("Success", "https://media.discordapp.net/attachments/760163394677506048/764202511460466698/717382820363763852_1.png")
+  .setDescription(`**The alts kicker has been toggled to:** ${c}on${c}` + `\n\n**This action was configured by <@${message.author.id}> - ${message.author.id} - ${message.author.tag}**` + "\n\n" + `**<a:info:781586085188862002> Few things to keep in mind: Bots role must be higher than members role, and the bot must has ADMINISTRATOR permissions in the guild in order to run properly.\n\n<a:info:781586085188862002> Please also make sure you have or will have configured these commands below:**` + "\n\n" + "**" + "```js" + "\n"+ `${prefix}setDays <value>\n${prefix}setAction <KICK || BAN>\n${prefix}setLogs <CHANNEL>` + "```" + "**")
+ .setFooter(client.user.username, client.user.displayAvatarURL())
+                .setTimestamp()
+                .setColor(0x0099ff)
+      .setImage('attachment://image-lol.png')
+      
+      message.channel.send({ files: [attachment], embed: embed1 })
+    return;
+}
+if(status === true) {
+    db.set(`status_${message.guild.id}`, false)
+  
+    let embed2 = new discord.MessageEmbed()
+  .setAuthor("Success", "https://media.discordapp.net/attachments/760163394677506048/764202511460466698/717382820363763852_1.png")
+  .setDescription(`**The alts kicker has been toggled to:** ${c}off${c}` + `\n\n**This action was configured by <@${message.author.id}> - ${message.author.id} - ${message.author.tag}**` + "\n\n" + `**<a:info:781586085188862002> Few things to keep in mind: Bots role must be higher than members role, and the bot must has ADMINISTRATOR permissions in the guild in order to run properly.\n\n<a:info:781586085188862002> Please also make sure you have or will have configured these commands below:**` + "\n\n" + "**" + "```js" + "\n"+ `${prefix}setDays <value>\n${prefix}setAction <KICK || BAN>\n${prefix}setLogs <CHANNEL>` + "```" + "**")
+ .setFooter(client.user.username, client.user.displayAvatarURL())
+                .setTimestamp()
+                .setColor(0x0099ff)
+    message.channel.send(embed2)
+    return;
+}
+    } 
+     }
