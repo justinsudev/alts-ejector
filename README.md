@@ -25,22 +25,23 @@ The **Alts Eliminator Bot** is a customizable Discord bot designed to help serve
 git clone <repository_url>
 ```
 
-Navigate to the project directory:
-
-bashCopycd alts-eliminator
-
-Install dependencies:
-
-bashCopynpm install
-
-Create a .env file and set your bot token:
-
+### Navigate to the project directory:
+```bash
+Copycd alts-eliminator
+```
+### Install dependencies:
+```bash
+Copynpm install
+```
+### Create a .env file and set your bot token:
+```bash
 CopyTOKEN=your_discord_bot_token
-
-Start the bot:
-
-bashCopynode index.js
-Commands
+```
+### Start the bot:
+```bash
+Copynode index.js
+```
+### Commands
 General Commands
 
 !help - Displays the list of commands and their usage
