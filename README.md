@@ -41,8 +41,8 @@ CopyTOKEN=your_discord_bot_token
 ```bash
 Copynode index.js
 ```
-### Commands
-General Commands
+## Commands
+### General Commands
 
 !help - Displays the list of commands and their usage
 !info - Provides detailed information about the bot
@@ -50,7 +50,7 @@ General Commands
 !ping - Displays the bot's current latency
 !invite - Provides an invite link to add the bot to other servers
 
-Moderation Commands
+### Moderation Commands
 
 !nuke - Deletes and recreates a channel, clearing all its messages
 !prefix <new-prefix> - Changes the bot's prefix in the server
@@ -64,7 +64,7 @@ Moderation Commands
 !settings - Displays the current configuration settings
 !reset - Resets all configuration settings to default values
 
-Alt Detection Commands
+### Alt Detection Commands
 
 !bypass <@user> - Allows a specific user to bypass account restrictions
 !unbypass <@user> - Removes a user from the bypass list
@@ -73,7 +73,7 @@ Alt Detection Commands
 !showalts <days> - Lists accounts in the server created within the specified number of days
 !agecheck <@user> - Checks the account creation date of a user
 
-Utility Commands
+### Utility Commands
 
 !nopfp - Lists members without profile pictures
 !bots - Displays all bots in the server
@@ -82,37 +82,37 @@ Utility Commands
 !fetch <user ID> - Fetches user information by ID
 !snipe - Retrieves the last deleted message in a channel
 
-Setup Commands
+### Setup Commands
 
 !setup - Guides users through the setup process to ensure the bot functions properly
 
-Configuration and Permissions
+### Configuration and Permissions
 
 The bot requires Administrator permissions to operate fully
 The bot's role must be higher than the roles of the members it moderates
 Ensure channels for logs, welcomes, and leave messages are properly set for corresponding features
 
-Key Considerations
+### Key Considerations
 
 Account Age Detection: Properly set the !setdays value to enforce account age limits
 Logging: Use !setlogs to keep track of bot actions and moderation logs
 
-Contributing
+## Contributing
 
-Fork the repository
-Create a new branch:
-
-bashCopygit checkout -b feature/your-feature
-
-Commit your changes:
-
-bashCopygit commit -m "Add your feature"
-
-Push to the branch:
-
-bashCopygit push origin feature/your-feature
-
-Open a pull request
+### Fork the repository
+### Create a new branch:
+```bash
+Copygit checkout -b feature/your-feature
+```
+### Commit your changes:
+```bash
+Copygit commit -m "Add your feature"
+```
+### Push to the branch:
+```bash
+Copygit push origin feature/your-feature
+```
+### Open a pull request
 
 License
 This project is licensed under the MIT License.
