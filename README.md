@@ -63,38 +63,39 @@ Copynode index.js
 #### !toggle - Toggles the alt detection system on or off
 #### !settings - Displays the current configuration settings
 #### !reset - Resets all configuration settings to default values
+
 ### Alt Detection Commands
 
-!bypass <@user> - Allows a specific user to bypass account restrictions
-!unbypass <@user> - Removes a user from the bypass list
-!bypassed - Shows the list of bypassed users
-!bannedalts - Displays the list of accounts banned for being alts
-!showalts <days> - Lists accounts in the server created within the specified number of days
-!agecheck <@user> - Checks the account creation date of a user
+#### !bypass <@user> - Allows a specific user to bypass account restrictions
+#### !unbypass <@user> - Removes a user from the bypass list
+#### !bypassed - Shows the list of bypassed users
+#### !bannedalts - Displays the list of accounts banned for being alts
+#### !showalts <days> - Lists accounts in the server created within the specified number of days
+#### !agecheck <@user> - Checks the account creation date of a user
 
 ### Utility Commands
 
-!nopfp - Lists members without profile pictures
-!bots - Displays all bots in the server
-!names <name> - Finds users with a specific username
-!discrim <#xxxx> - Finds users with a specific discriminator
-!fetch <user ID> - Fetches user information by ID
-!snipe - Retrieves the last deleted message in a channel
+#### !nopfp - Lists members without profile pictures
+#### !bots - Displays all bots in the server
+#### !names <name> - Finds users with a specific username
+#### !discrim <#xxxx> - Finds users with a specific discriminator
+#### !fetch <user ID> - Fetches user information by ID
+#### !snipe - Retrieves the last deleted message in a channel
 
 ### Setup Commands
 
-!setup - Guides users through the setup process to ensure the bot functions properly
+#### !setup - Guides users through the setup process to ensure the bot functions properly
 
 ### Configuration and Permissions
 
-The bot requires Administrator permissions to operate fully
-The bot's role must be higher than the roles of the members it moderates
-Ensure channels for logs, welcomes, and leave messages are properly set for corresponding features
+#### The bot requires Administrator permissions to operate fully
+#### The bot's role must be higher than the roles of the members it moderates
+#### Ensure channels for logs, welcomes, and leave messages are properly set for corresponding features
 
 ### Key Considerations
 
-Account Age Detection: Properly set the !setdays value to enforce account age limits
-Logging: Use !setlogs to keep track of bot actions and moderation logs
+#### Account Age Detection: Properly set the !setdays value to enforce account age limits
+#### Logging: Use !setlogs to keep track of bot actions and moderation logs
 
 ## Contributing
 
@@ -113,7 +114,8 @@ Copygit push origin feature/your-feature
 ```
 ### Open a pull request
 
-License
-This project is licensed under the MIT License.
-Support
-For issues or questions, please contact the bot developer on Discord: @Alts Ejecter#2935
+## License
+#### This project is licensed under the MIT License.
+
+## Support
+#### For issues or questions, please contact the bot developer on Discord: @Alts Ejecter#2935
