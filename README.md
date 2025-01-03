@@ -51,19 +51,18 @@ Copynode index.js
 !invite - Provides an invite link to add the bot to other servers
 
 ### Moderation Commands
-```bash
-!nuke - Deletes and recreates a channel, clearing all its messages
-!prefix <new-prefix> - Changes the bot's prefix in the server
-!setlogs <#channel> - Sets a channel for logging bot actions
-!setdays <number> - Defines the minimum account age (in days) required to join the server
-!setwelcome <#channel> - Assigns a channel for welcome messages
-!setleave <#channel> - Assigns a channel for leave messages
-!removewelcome - Removes the welcome channel
-!removeleave - Removes the leave channel
-!toggle - Toggles the alt detection system on or off
-!settings - Displays the current configuration settings
-!reset - Resets all configuration settings to default values
-```
+
+#### !nuke - Deletes and recreates a channel, clearing all its messages
+#### !prefix <new-prefix> - Changes the bot's prefix in the server
+#### !setlogs <#channel> - Sets a channel for logging bot actions
+#### !setdays <number> - Defines the minimum account age (in days) required to join the server
+#### !setwelcome <#channel> - Assigns a channel for welcome messages
+#### !setleave <#channel> - Assigns a channel for leave messages
+#### !removewelcome - Removes the welcome channel
+#### !removeleave - Removes the leave channel
+#### !toggle - Toggles the alt detection system on or off
+#### !settings - Displays the current configuration settings
+#### !reset - Resets all configuration settings to default values
 ### Alt Detection Commands
 
 !bypass <@user> - Allows a specific user to bypass account restrictions
