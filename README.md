@@ -51,7 +51,7 @@ Copynode index.js
 !invite - Provides an invite link to add the bot to other servers
 
 ### Moderation Commands
-
+```bash
 !nuke - Deletes and recreates a channel, clearing all its messages
 !prefix <new-prefix> - Changes the bot's prefix in the server
 !setlogs <#channel> - Sets a channel for logging bot actions
@@ -63,7 +63,7 @@ Copynode index.js
 !toggle - Toggles the alt detection system on or off
 !settings - Displays the current configuration settings
 !reset - Resets all configuration settings to default values
-
+```
 ### Alt Detection Commands
 
 !bypass <@user> - Allows a specific user to bypass account restrictions
