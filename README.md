@@ -3,6 +3,8 @@
 ## Note
 This project was originally programmed and hosted on Glitch (an online IDE). It has since been exported from Glitch and imported to Github.
 
+Original Glitch.com Project Link: https://glitch.com/edit/#!/alts-ejector-bot
+
 ## Overview
 The **Alts Eliminator Bot** is a customizable Discord bot designed to help server administrators prevent alternate accounts ("alts") from joining their servers. By enforcing account age restrictions and offering advanced moderation and utility features, the bot ensures that only trusted members can access the community. 
 
