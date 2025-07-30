@@ -1,4 +1,4 @@
-# Alts Eliminator Bot
+# SecureCord
 
 ## Note
 This project was originally programmed and hosted on Glitch (an online IDE). It has since been exported from Glitch and imported to Github.
